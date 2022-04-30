@@ -4,3 +4,104 @@
 - Cinza escuro: #6D6D6E
 - Vermelho: #B9090B
 - Cinza claro: #808080 */
+
+body{}
+
+.container{}
+
+/* CABEÇALHO */
+.cabecalho{}
+
+.cabecalho__logo{}
+.cabecalho__logo figcaption{}
+
+.cabecalho__menuPrimario{}
+.menu__lista{}
+.lista__items{}
+
+.cabecalho__menuSecundario{}
+.menu2__lista{}
+.lista2__items{}
+
+/* PRINCIPAL */
+.principal{}
+
+.principal__destaque{}
+
+.destaque__fundo{}
+
+.destaque__conteudo{}
+.strangerThings{}
+.destaque__conteudo p{}
+.btn__assistir{}
+.btn__infos{}
+
+/* SEÇÃO EM ALTA */
+.principal__emAlta{}
+
+.menu__emAlta{}
+.emAlta__lista{}
+.emAlta__items{}
+
+/* SEÇÃO EM CONTINUAR ASSISTINDO */
+.principal__continuarAssistindo{}
+
+.menu__continuarAssistindo{}
+.continuarAssistindo__lista{}
+.continuarAssistindo__items{}
+
+.progresso{}
+.progresso__barra{}
+.progresso__completo{}
+
+/* SEÇÃO EM MINHA LISTA */
+.principal__minhaLista{}
+
+.menu__minhaLista{}
+.minhaLista__lista{}
+.minhaLista__items{}
+
+/* SEÇÃO EM SÓ NA NETFLIX */
+.principal__soNaNetflix{}
+
+.menu__soNaNetflix{}
+.soNaNetflix__lista{}
+.soNaNetflix__items{}
+
+/* SEÇÃO TOP 10 BRASIL */
+.principal__topBrasil{}
+
+.menu__topBrasil{}
+.topBrasil__lista{}
+.topBrasil__items{}
+
+/* SEÇÃO ASSISTA NOVAMENTE */
+.principal__assistaNovamente{}
+
+.menu__assistaNovamente{}
+.assistaNovamente__lista{}
+.assistaNovamente__items{}
+
+/* RODAPÉ */
+.rodape{}
+
+.rodape__redes{}
+.redes{}
+
+.rodape__listaLinks{}
+.links__items{}
+
+.rodape__codigoservico{}
+.rodape__btnCodigo{}
+
+.rodape__copy{}
+
+.rodape__copy p{}
+
+
+
+
+
+
+
+
