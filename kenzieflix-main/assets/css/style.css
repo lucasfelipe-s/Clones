@@ -5,6 +5,25 @@
 - Vermelho: #B9090B
 - Cinza claro: #808080 */
 
+*{
+    scrollbar-width: thin;
+    scrollbar-color: #fff #141414;
+    
+}
+*::-webkit-scrollbar {
+    width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #141414;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #141414;
+}
+
 body{
     width: 100%;
     background-color: #141414;
@@ -13,21 +32,32 @@ body{
 
 nav ul{
     display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.principal nav ul{
     overflow-x: scroll;
 }
 
 a{
     color: white;
+    text-decoration: none;
 }
 
 .container{
     display:flex;
     flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.container__cabecalho{
+    display: flex;
+    flex-direction: row !important;
 }
 
 /* CABEÇALHO */
 .cabecalho{
-    display: flex;
     width: 100%;
     background: url(https://assets.nflxext.com/ffe/siteui/akira/fallback/header_gradient.png) repeat-x;
     position: fixed;
@@ -55,18 +85,23 @@ a{
     display: none;
 }
 
+.lista__items a:hover:not(.inicio a){
+    color: rgba(255,255,255,.7);
+    transition: 0.5s;
+}
 
-.cabecalho__menuPrimario{}
+.cabecalho__menuSecundario{
+    display: flex;
+    align-items: center;
+}
 
-.menu__lista{}
+.menu__lista2{
+    align-items: center;
+}
 
-.lista__items{}
-
-.cabecalho__menuSecundario{}
-
-.menu__lista2{}
-
-.lista2__items{}
+.lista2__items{
+    margin: 0 5px;
+}
 
 /* PRINCIPAL */
 .principal{
@@ -84,10 +119,13 @@ a{
 
 .destaque__fundo{
     width: 100%;
+    max-height: 870px;
+    /* max-height: 810px; */
 }
 
 .strangerThings{
     width: 60%;
+    max-width: 533px;
     margin-left: 15px;
     opacity: 85%;
 }
@@ -108,6 +146,7 @@ a{
     border: none;
     border-radius: 5px;
     margin-left: 15px;
+    font-weight: bold;
 }
 
 .btn__assistir{
@@ -118,6 +157,12 @@ a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.btn__assistir:hover{
+    background-color: rgba(255,255,255,.8);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn__assistir img,.btn__infos img{
@@ -135,8 +180,14 @@ a{
     align-items: center;
 }
 
+.btn__infos:hover{
+    background-color: rgba(109,109,110,0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 .principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente{
-    margin:22px 0 22px 15px;
+    margin:0 0 0 15px;
 }
 
 section h2{
@@ -145,9 +196,25 @@ section h2{
     font-weight: 500;
 }
 
+section h2:hover{
+    cursor: pointer;
+    color: #fafafa;
+    transition: 0.3s;
+}
+
 li img:not(.filme1 img){
     margin-left: 8px;
 }
+
+li img:hover{
+    cursor: pointer;
+}
+
+
+.emAlta__items:hover img,.continuarAssistindo__items:hover img,.minhaLista__items:hover img,.soNaNetflix__items:hover img,.topBrasil__items:hover img,.assistaNovamente__items:hover img {
+    filter: brightness(110%);
+}
+
 
 /* SEÇÃO EM CONTINUAR ASSISTINDO */
 
@@ -205,6 +272,11 @@ li img:not(.filme1 img){
     margin-right: 20px;
 }
 
+.redes:hover{
+    filter: brightness(200%);
+    transition: 0.4s;
+}
+
 .rodape__listaLinks{
     list-style: none;
     display: none;
@@ -212,6 +284,11 @@ li img:not(.filme1 img){
 
 .links__items{
     margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.links__items a:hover{
+    text-decoration: underline;
 }
 
 .rodape__btnCodigo{
@@ -222,3 +299,164 @@ li img:not(.filme1 img){
     font-weight: 400;
     margin-bottom: 30px;
 }
+
+.rodape__btnCodigo:hover{
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (min-width: 450px){
+    .principal{
+        margin-top: 100px;
+    }
+    .strangerThings{
+        opacity: 100%;
+    }
+    .destaque__conteudo p{
+        width: 60%;
+        max-width: 584px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .principal{
+        margin-top: 140px;
+    }
+    .destaque__conteudo p{
+        font-size: 1rem;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    .strangerThings,.btn__assistir,.principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente{
+        margin-left: 20px;
+    }
+    section h2{
+        font-size: 1.2rem;
+    }
+    .btn__assistir{
+        width: 120px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .btn__infos{
+        width: 170px;
+        height: 40px; 
+        font-size: 1rem;  
+    }
+    .rodape__listaLinks{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .rodape__listaLinks a{
+        margin-right: 15px;
+    }
+}
+
+@media screen and (min-width: 760px){
+    .principal{
+        margin-top: 200px;
+    }
+    .destaque__conteudo p{
+        font-size: 1.2rem;
+        margin-left: 30px;
+    }
+    .strangerThings,.btn__assistir,.principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente{
+        margin-left: 30px;
+    }
+    .cabecalho__menus{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+    .cabecalho__menuPrimario{
+        display: none;
+    }
+    .cabecalho__logo{
+        max-width: 142px;
+    }
+    .cabecalho__logo img{
+        margin: 0 0 0 30px ;
+    }
+    li img:not(.filme1 img){
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .principal{
+        margin-top: 308px;
+    }
+    .destaque__conteudo p{
+        font-size: 1.6rem;
+        margin-left: 30px;
+    }
+    section h2{
+        font-size: 1.6rem;
+    }
+    .btn__assistir{
+        width: 188px;
+        height: 62px;
+        font-size: 1.3rem;
+    }
+    .btn__infos{
+        width: 290px;
+        height: 62px; 
+        font-size: 1.3rem;  
+    }
+    .strangerThings,.btn__assistir,.principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente{
+        margin-left: 30px;
+    }
+    .cabecalho__menus{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-left: 50px;
+    }
+    .cabecalho__menuPrimario{
+        display: flex;
+    }
+    .lista__items,.lista2__items{
+        margin-left: 20px;
+    }
+    li img:not(.filme1 img){
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .strangerThings,.btn__assistir,.principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente,.destaque__conteudo p,.cabecalho__logo img{
+        margin-left: 60px;
+    }
+    .cabecalho__menus{
+        margin-left: 80px;
+    }
+    section h2{
+        margin-top: 44px;
+    }
+    .principal__emAlta,.rodape{
+        margin-top: 63px;
+    }
+    .rodape{
+        margin-bottom: 35px;
+    }
+    .links__items{
+        margin-bottom: 15px;
+        margin-right: 150px;
+        width: 156px;
+    }
+    .rodape__listaLinks a{
+        margin-right: 0;
+    }
+    .btn__assistir img,.btn__infos img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+@media screen and (min-width: 1280px){
+    .menu__lista2{
+        margin-right: 80px;
+    }
+}
+
