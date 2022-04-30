@@ -2,6 +2,8 @@
 
 Projeto desenvolvido na parte 2 da maratona de programação da Kenzie Academy Brasil, porém com modificações para treinar minhas habilidades em HTML e CSS.
 
+- P.S: commit "criacao do proeto kenzieflix" faltando o "J" por conta que meu teclado falhou, dois commits "adicionando responsividade e ajeitando o CSS" por conta de um problema no merge.
+
 ## Ferramentas
 
 - VSCode
@@ -13,12 +15,10 @@ Projeto desenvolvido na parte 2 da maratona de programação da Kenzie Academy B
 ### Figma
 
 - [Figma desktop](https://www.figma.com/file/krw4UzY7OFc6AJVxr4Q6gg/KenzieFlix?node-id=0%3A1)
-- [Figma mobile](https://www.figma.com/file/6Ruhg2NFs3CDxtoWLBfEsz/NetflixApp?node-id=0%3A1)
 
 ### Imagem
 
 - [Imagem Desktop](./assets/img/desktop.png)
-- [Imagem Mobile](./assets/img/mobile.png)
 
 ### Resultado final
 

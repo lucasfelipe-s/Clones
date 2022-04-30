@@ -3,7 +3,6 @@
 - Branco: #FFFFFF
 - Cinza escuro: #6D6D6E
 - Vermelho: #B9090B
-<<<<<<< HEAD
 - Cinza claro: #808080 */
 
 *{
@@ -306,6 +305,12 @@ li img:hover{
     color: white;
 }
 
+.rodape__copy a{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #E5E5E5;
+}
+
 @media screen and (min-width: 450px){
     .principal{
         margin-top: 100px;
@@ -460,7 +465,3 @@ li img:hover{
         margin-right: 80px;
     }
 }
-
-=======
-- Cinza claro: #808080 */
->>>>>>> ecd61bb4af487ccb309910e2f4fdcf66760a8ed7
