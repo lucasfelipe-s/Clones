@@ -5,103 +5,220 @@
 - Vermelho: #B9090B
 - Cinza claro: #808080 */
 
-body{}
+body{
+    width: 100%;
+    background-color: #141414;
+    font-family: 'Roboto', sans-serif;
+}
 
-.container{}
+nav ul{
+    display: flex;
+    overflow-x: scroll;
+}
+
+a{
+    color: white;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
 
 /* CABEÇALHO */
-.cabecalho{}
+.cabecalho{
+    display: flex;
+    width: 100%;
+    background: url(https://assets.nflxext.com/ffe/siteui/akira/fallback/header_gradient.png) repeat-x;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    height: 50px;
+}
 
-.cabecalho__logo{}
-.cabecalho__logo figcaption{}
+.cabecalho__menus{
+    display: none;
+    background-color: none;
+}
+
+.cabecalho__logo{
+    width: 100%;
+}
+
+.cabecalho__logo img{
+    display: block;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.cabecalho__logo figcaption{
+    display: none;
+}
+
 
 .cabecalho__menuPrimario{}
+
 .menu__lista{}
+
 .lista__items{}
 
 .cabecalho__menuSecundario{}
-.menu2__lista{}
+
+.menu__lista2{}
+
 .lista2__items{}
 
 /* PRINCIPAL */
-.principal{}
+.principal{
+    margin-top: 65px;
+}
 
-.principal__destaque{}
+.imagem__destaque{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 
-.destaque__fundo{}
+.destaque__fundo{
+    width: 100%;
+}
 
-.destaque__conteudo{}
-.strangerThings{}
-.destaque__conteudo p{}
-.btn__assistir{}
-.btn__infos{}
+.strangerThings{
+    width: 60%;
+    margin-left: 15px;
+    opacity: 85%;
+}
 
-/* SEÇÃO EM ALTA */
-.principal__emAlta{}
+.destaque__conteudo p{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 10px 0px 10px 15px;
+}
 
-.menu__emAlta{}
-.emAlta__lista{}
-.emAlta__items{}
+.principal__botoes{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn__assistir,.btn__infos{
+    border: none;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.btn__assistir{
+    background-color: white;
+    color: #141414;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn__assistir img,.btn__infos img{
+    width: 20px;
+    height: 20px;
+}
+
+.btn__infos{
+    background-color:rgba(109,109,110,0.7);
+    color: white;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.principal__emAlta,.principal__continuarAssistindo,.principal__minhaLista,.principal__soNaNetflix,.principal__topBrasil,.principal__assistaNovamente{
+    margin:22px 0 22px 15px;
+}
+
+section h2{
+    margin:22px 0 10px;
+    color:#E5E5E5;
+    font-weight: 500;
+}
+
+li img:not(.filme1 img){
+    margin-left: 8px;
+}
 
 /* SEÇÃO EM CONTINUAR ASSISTINDO */
-.principal__continuarAssistindo{}
 
-.menu__continuarAssistindo{}
-.continuarAssistindo__lista{}
-.continuarAssistindo__items{}
+.continuarAssistindo__items{
+    position: relative;
+}
 
-.progresso{}
-.progresso__barra{}
-.progresso__completo{}
+.continuarAssistindo__items .progresso{
+    padding: 3% 20% 0;
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+}
 
-/* SEÇÃO EM MINHA LISTA */
-.principal__minhaLista{}
+.continuarAssistindo__items .progresso .progresso__barra{
+    height: 3px;
+}
 
-.menu__minhaLista{}
-.minhaLista__lista{}
-.minhaLista__items{}
+.progresso__barra{
+    display: block;
+    position: relative;
+    background-color: rgba(255,255,255,.3);
+}
 
-/* SEÇÃO EM SÓ NA NETFLIX */
-.principal__soNaNetflix{}
-
-.menu__soNaNetflix{}
-.soNaNetflix__lista{}
-.soNaNetflix__items{}
-
-/* SEÇÃO TOP 10 BRASIL */
-.principal__topBrasil{}
-
-.menu__topBrasil{}
-.topBrasil__lista{}
-.topBrasil__items{}
-
-/* SEÇÃO ASSISTA NOVAMENTE */
-.principal__assistaNovamente{}
-
-.menu__assistaNovamente{}
-.assistaNovamente__lista{}
-.assistaNovamente__items{}
+.progresso__completo{
+    width: 28%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: #e50914;
+}
 
 /* RODAPÉ */
-.rodape{}
+.rodape{
+    max-width: 980px;
+    margin: 20px auto 20px;
+    padding: 0 4%;
+    color: grey;
+}
 
-.rodape__redes{}
-.redes{}
+.rodape a{
+    color: grey;
+    text-decoration: none;
+}
 
-.rodape__listaLinks{}
-.links__items{}
+.rodape__redes{
+    display: flex;
+    margin-bottom: 15px;
+}
 
-.rodape__codigoservico{}
-.rodape__btnCodigo{}
+.redes{
+    height: 24px;
+    width: 24px;
+    margin-right: 20px;
+}
 
-.rodape__copy{}
+.rodape__listaLinks{
+    list-style: none;
+    display: none;
+}
 
-.rodape__copy p{}
+.links__items{
+    margin-bottom: 15px;
+}
 
-
-
-
-
-
-
-
+.rodape__btnCodigo{
+    background-color: #141414;
+    color: gray;
+    border: 1px solid gray;
+    padding: 10px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
