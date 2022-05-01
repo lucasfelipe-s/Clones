@@ -22,7 +22,7 @@ Projeto desenvolvido na parte 2 da maratona de programação da Kenzie Academy B
 
 ### Resultado final
 
-- [Kenzieflix]()
+- [Kenzieflix](https://kenzie-flix-lucasfelipe.netlify.app)
 
 ## Desafios propostos:
 
